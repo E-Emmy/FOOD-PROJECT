@@ -1,12 +1,10 @@
 /*~~~~~~  GOOGLE FONT ~~~~~~ */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 /*~~~~~~ VARIABLE CSS ~~~~~~ */
 :root {
   --header-height: 3.5rem; /*56px*/
 
- 
   /*~~~~~~  COLORS ~~~~~~ */
 
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -20,20 +18,22 @@
   --color-primary: hsl(var(--primary-color-hue), 49%, 49%);
   --color-dark: hsl(252, 30%, var(--dark-color-lightness));
 
-/*~~~~~~  FONTS AND TYPOGRAPHY ~~~~~~ */
+  /*~~~~~~  FONTS AND TYPOGRAPHY ~~~~~~ */
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Rubik", sans-serif;
+  --body-font: "Poppins", sans-serif;
   --h1-font-size: 2.25rem;
+  --big-font-size:5rem;
+  --small-size:2.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
 
-/*~~~~~~  FONT WEIGHT ~~~~~~ */
+  /*~~~~~~  FONT WEIGHT ~~~~~~ */
   --font-medium: 400;
   --font-semi-bold: 600;
 
- /*~~~~~~ MARGIN BOTTOMS ~~~~~~ */
+  /*~~~~~~ MARGIN BOTTOMS ~~~~~~ */
   /*.5rem = 8px | 1rem = 16px ...*/
   --m-0-5: 0.5rem;
   --m-0-75: 0.75rem;
@@ -45,10 +45,10 @@
   /*~~~~~~  CARD PADDING ~~~~~~ */
   --card-padding: 1.9rem 0.95rem;
 
-/*~~~~~~  BORDER RADIUS ~~~~~~ */
+  /*~~~~~~  BORDER RADIUS ~~~~~~ */
   --border-radius: 1.25rem;
 
-/*~~~~~~  BOX SHADOW ~~~~~~ */
+  /*~~~~~~  BOX SHADOW ~~~~~~ */
   --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 }
 
@@ -222,4 +222,51 @@ h3 {
 .navlogo {
   max-width: 100%;
   height: 100px;
+}
+
+/*~~~~~~  HOME~~~~~~ */
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+}
+
+.home-img img {
+  width: 600px;
+}
+
+
+.container h1 {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+}
+
+.container h2 {
+  font-size: var(--small-size);
+}
+
+.title-text span {
+  font-size: 9rem;
+  color: var(--color-primary);
+}
+
+
+/*~~~~~~  Btn~~~~~~ */
+.btn {
+  display: inline-block;
+padding: 10px 20px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--border-radius);
+  transition: .4s;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: scale(1.2) translateY(10px);
 }
