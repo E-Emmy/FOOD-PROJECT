@@ -22,8 +22,8 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 2.25rem;
-  --big-font-size:5rem;
-  --small-size:2.25rem;
+  --big-font-size: 5rem;
+  --small-size: 2.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
@@ -133,10 +133,10 @@ h3 {
   padding-right: 15px;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /*~~~~~~  HEADER~~~~~~ */
 
@@ -239,7 +239,6 @@ h3 {
   width: 600px;
 }
 
-
 .container h1 {
   font-size: var(--big-font-size);
   font-weight: var(--font-medium);
@@ -250,23 +249,32 @@ h3 {
 }
 
 .title-text span {
-  font-size: 9rem;
+  font-size: 8rem;
   color: var(--color-primary);
 }
-
 
 /*~~~~~~  Btn~~~~~~ */
 .btn {
   display: inline-block;
-padding: 10px 20px;
+  padding: 10px 20px;
   background: var(--color-primary);
   color: #fff;
   border-radius: var(--border-radius);
-  transition: .4s;
+  transition: 0.4s;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .btn:hover {
   transform: scale(1.2) translateY(10px);
+}
+
+/*~~~~~~  about~~~~~~ */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1.5rem;
+  align-items: center;
+  background-color: var(--color-light);
 }
