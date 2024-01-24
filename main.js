@@ -1,4 +1,5 @@
-//--~~~~~~ REVIEW SWIPER~~~~~~//
+//--~~~~~~ TESTIMONIAL~~~~~~//
+
 var swiper = new Swiper(".testimonial-wrapper", {
   spaceBetween: 30,
   loop: "true",
