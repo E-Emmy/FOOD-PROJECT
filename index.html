@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Ethical Emmy" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--~~~~~~ SWIPER CSS~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
     <!--~~~~~~ CSS ~~~~~~-->
     <link rel="stylesheet" href="style.css" />
 
@@ -21,12 +27,6 @@
 
     <!--~~~~~~ HEADER TITLE ~~~~~~-->
     <title>JOPA FOODIE</title>
-
-    <!--~~~~~~ SWIPER CSS~~~~~~-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <header class="header" id="header">
@@ -320,43 +320,170 @@
       </div>
     </section>
 
- <!--~~~~~~Testimonial ~~~~~~-->
- <section class="testimonial">
-  <div class="container">
-    <!--section title-->
-    <h2 class="section-title padd-15">They <span>S</span>aid About Us</h2>
-    <!--testimonial wrapper-->
-    <div class="swiper testimonial-wrapper">
-      <div class="swiper-wrapper">
-        <!--testimonial item-->
-        <div class="testimonial-item swiper-slide">
-          <div class="thumb">
-            <img src="img/avatar-1.svg" alt="" />
+    <!--~~~~~~Testimonial ~~~~~~-->
+    <section class="testimonial">
+      <div class="container">
+        <!--section title-->
+        <h2 class="section-title padd-15">They <span>S</span>aid About Us</h2>
+        <!--testimonial wrapper-->
+        <div class="swiper testimonial-wrapper">
+          <div class="swiper-wrapper">
+            <!--testimonial item-->
+            <div class="testimonial-item swiper-slide">
+              <div class="thumb">
+                <img src="img/avatar-1.svg" alt="" />
+              </div>
+              <h3>Ethical Emmy</h3>
+              <span class="subtitle"> 1hr ago &bull;</span>
+              <div class="comment">
+                <b class="subtitle-bold">JOPA FOODIE!</b> Yummy dishes
+                &#128523;, lovely presentation. Each bite brings joy. A must-try
+                for food lovers. Fantastic experience.
+              </div>
+            </div>
+
+            <!--testimonial item-->
+            <div class="testimonial-item swiper-slide">
+              <div class="thumb">
+                <img src="img/avatar-3.svg" alt="" />
+              </div>
+              <h3>Ethical Emmy</h3>
+              <span class="subtitle"> 5 minutes ago &bull; </span>
+              <div class="comment">
+                Delightful dishes, beautiful presentation.Every bite is a treat.
+                Highly recommended for food lovers.I love
+                <b class="subtitle-bold">JOPA FOODIE &#128293;!</b>.
+              </div>
+            </div>
           </div>
-          <h3>Ethical Emmy</h3>
-          <span class="subtitle"> 1hr ago &bull;</span>
-          <div class="comment">
-       <b class="subtitle-bold">JOPA FOODIE!</b> Yummy dishes &#128523, lovely presentation. Each bite brings joy. A must-try for food lovers. Fantastic experience.
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--~~~~~~CONTACT ~~~~~~-->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <!--section title-->
+        <h2 class="section-title padd-15"><span>C</span>ontact us</h2>
+        <div class="row">
+          <!--contact box-->
+          <div class="contact-box padd-15">
+            <div class="contact-data">
+              <!--contact-information-->
+              <div class="contact-information">
+                <h3 class="contact-subtitle">
+                  Call us for instant delivery &#128666;
+                </h3>
+                <span class="contact-description">
+                  <i class="lni lni-phone contact-icon"></i>
+                  +234 810 7210 553
+                </span>
+              </div>
+              <!--contact-information-->
+              <div class="contact-information">
+                <h3 class="contact-subtitle">Write us by mails</h3>
+                <span class="contact-description">
+                  <i class="lni lni-user contact-icon"></i>
+                  ethical.emmy@gmail.com
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--contact form-->
+          <form action="" class="contact-form padd-15">
+            <div class="contact-inputs">
+              <!--contact-content-->
+              <div class="contact-content">
+                <input type="email" class="contact-input" />
+                <label for="" class="contact-label">Email</label>
+                <span></span>
+              </div>
+              <!--contact-content-->
+              <div class="contact-content">
+                <input type="text" class="contact-input" />
+                <label for="" class="contact-label">Subject</label>
+                <span></span>
+              </div>
+              <!--contact-content-->
+              <div class="contact-content contact-area">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="contact-input"
+                ></textarea>
+                <label for="" class="contact-label">Message</label>
+                <span></span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-default">Send Message</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~ FOOTER ~~~~~~-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-text padd-15">
+          <p>&copy; Ethical Emmy 2024</p>
+        </div>
+      </div>
+    </footer>
+
+    <!--~~~~~~ CUSTOMIZE THEME ~~~~~~-->
+    <div class="customize-theme">
+      <div class="card">
+        <h2>Customize your view</h2>
+        <p>Manage your font size, color, and background</p>
+        <!--font size-->
+        <div class="font-size">
+          <h3>Font Size</h3>
+          <div>
+            <h6>Aa</h6>
+            <div class="choose-size">
+              <span class="font-size-1"></span>
+              <span class="font-size-2"></span>
+              <span class="font-size-3 active"></span>
+              <span class="font-size-4"></span>
+            </div>
+            <h3>Aa</h3>
           </div>
         </div>
-
-        <!--testimonial item-->
-        <div class="testimonial-item swiper-slide">
-          <div class="thumb">
-            <img src="img/avatar-3.svg" alt="" />
+        <!--color-->
+        <div class="color">
+          <h3>Color</h3>
+          <div class="choose-color">
+            <span class="color-1"></span>
+            <span class="color-2"></span>
+            <span class="color-3 active"></span>
+            <span class="color-4"></span>
+            <span class="color-5"></span>
           </div>
-          <h3>Ethical Emmy</h3>
-          <span class="subtitle"> 5 minutes ago &bull; </span>
-          <div class="comment">
-            Delightful dishes, beautiful presentation.Every bite is a treat. Highly recommended for food lovers.I love <b class="subtitle-bold">JOPA FOODIE &#128293!</b>.
+        </div>
+        <!--background-->
+        <div class="background">
+          <h3>background</h3>
+          <div class="choose-bg">
+            <div class="bg-1">
+              <span></span>
+              <h5 for="bg-1">Light</h5>
+            </div>
+            <div class="bg-2">
+              <span></span>
+              <h5 for="bg-2">Dim</h5>
+            </div>
+            <div class="bg-3">
+              <span></span>
+              <h5 for="bg-3">Dark</h5>
+            </div>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-  </div>
-</section>
-
+    
+    
 
 
     <!--~~~~~~ SWIPER JS ~~~~~~-->
