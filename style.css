@@ -1013,6 +1013,10 @@ img {
   }
 }
 
+.nav {
+  padding-left: 50px;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     margin: var(--header-height) 0 0 0;
@@ -1023,6 +1027,7 @@ img {
 
   .nav {
     height: var(--header-height);
+    position: relative;
   }
 
   .nav-list {
@@ -1132,6 +1137,10 @@ img {
     padding-bottom: 50px;
   }
 
+  .nav-btns {
+    padding-right: 40px;
+  }
+
   .customize-theme .card {
     width: 96vw;
     padding: 1rem;
@@ -1139,6 +1148,10 @@ img {
 
   .menu .title {
     text-align: center;
+  }
+  .contact-form {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .menu .content {
