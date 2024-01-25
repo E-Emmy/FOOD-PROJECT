@@ -1,5 +1,5 @@
 /*~~~~~~  GOOGLE FONT ~~~~~~ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
 
 /*~~~~~~ VARIABLE CSS ~~~~~~ */
 :root {
@@ -8,21 +8,21 @@
   /*~~~~~~  COLORS ~~~~~~ */
 
   /*Color mode HSL(hue, saturation, lightness)*/
-  --primary-color-hue: 99;
+  --primary-color-hue: 210;
   --dark-color-lightness: 17%;
   --color-black: hsl(207, 74%, 1%);
   --light-color-lightness: 92%;
-  --accent-color: hsl(210, 100%, 87%);
+  --accent-color: hsla(208, 36%, 91%, 0.877);
   --white-color-lightness: 100%;
   --color-white: hsl(252, 30%, var(--white-color-lightness));
   --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(var(--primary-color-hue), 49%, 49%);
+  --color-primary: hsl(var(--primary-color-hue), 70%, 70%);
   --color-dark: hsl(252, 30%, var(--dark-color-lightness));
 
   /*~~~~~~  FONTS AND TYPOGRAPHY ~~~~~~ */
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Rubik", sans-serif;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;
@@ -31,6 +31,7 @@
 
   /*~~~~~~  FONT WEIGHT ~~~~~~ */
   --font-medium: 400;
+  --font-semi: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
 
@@ -63,7 +64,7 @@
 }
 html {
   scroll-behavior: smooth;
-  color: hsl(99, 75%, 60%);
+  color: hsl(202, 75%, 60%);
 }
 
 body,
@@ -142,6 +143,17 @@ img {
   vertical-align: middle;
 }
 
+/*~~~~~~  SCROLLABLE BAR ~~~~~~ */
+::-webkit-scrollbar {
+  background: var(--color-white);
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 0.5rem;
+}
+
 /*~~~~~~  HEADER~~~~~~ */
 
 .header {
@@ -177,10 +189,14 @@ img {
 }
 
 .nav-logo {
-  font-size: var(--font-semi-bold);
+  font-size: 1.3rem;
   font-weight: var(--font-bold);
   letter-spacing: 0.125rem;
   position: relative;
+}
+
+.nav-logo span {
+  color: var(--color-primary);
 }
 
 .nav-logo::after {
@@ -193,6 +209,7 @@ img {
   top: 56%;
   right: -0.25rem;
 }
+
 .nav-menu {
   margin-left: auto;
 }
@@ -203,7 +220,7 @@ img {
 }
 
 .nav-link {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi);
   transition: 0.3s;
 }
 
@@ -265,10 +282,16 @@ img {
   max-width: 100%;
 }
 
+.home-text h2 {
+  font-weight: var(--font-medium);
+}
+.home-title span {
+  color: var(--color-primary);
+}
+
 .section-title,
 .title-text {
   font-weight: var(--font-medium);
-  font-size: 3rem;
 }
 
 .section-title span,
@@ -548,19 +571,26 @@ img {
 .blog-item .inner {
   background: var(--color-white);
   overflow: hidden;
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius);
   transform: translateY(0);
   transition: 0.3s;
 }
 
 .blog-item .inner:hover {
-  transform: translateY(-0.625rem);
+  transform: translateY(-0.98rem);
 }
 
 .blog-item .thumb {
   overflow: hidden;
   position: relative;
+}
+
+.blog-item .thumb img {
+  transform: scale(1);
+  transition: 0.3s;
+}
+.blog-item .thumb:hover img {
+  transform: scale(1.1);
 }
 
 .blog-item .category {
@@ -607,7 +637,6 @@ img {
   border-radius: 50%;
   display: inline-block;
   height: 0.19rem;
-
   width: 0.19rem;
   margin-right: 0.6rem;
   vertical-align: middle;
@@ -881,11 +910,11 @@ img {
 }
 
 .customize-theme .choose-color span:nth-child(2) {
-  background: hsl(352, 75%, 60%);
+  background: hsl(3, 69%, 58%);
 }
 
 .customize-theme .choose-color span:nth-child(3) {
-  background: hsl(99, 49%, 49%);
+  background: hsl(210, 100%, 50%);
 }
 
 .customize-theme .choose-color span:nth-child(4) {
@@ -893,7 +922,7 @@ img {
 }
 
 .customize-theme .choose-color span:nth-child(5) {
-  background: hsl(202, 75%, 60%);
+  background: hsla(52, 75%, 60%);
 }
 
 .customize-theme .choose-color span.active {

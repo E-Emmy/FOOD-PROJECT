@@ -10,13 +10,12 @@ var swiper = new Swiper(".testimonial-wrapper", {
 });
 
 const navMenu = document.getElementById("nav-menu"),
-navToggle = document.getElementById("nav-toggle"),
-navClose = document.getElementById("nav-close");
-
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
 //--~~~~~~ SHOW MENU~~~~~~//
 
-if(navToggle) {
+if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
@@ -24,7 +23,7 @@ if(navToggle) {
 
 //--~~~~~~ MENU HIDDEN~~~~~~//
 
-if("nav-close") {
+if ("nav-close") {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
@@ -39,19 +38,19 @@ function linkAction() {
   //when we click on each nav, we remove the show menu class
   navMenu.classList.remove("show-menu");
 }
-  navLinks.forEach((n) => n.addEventListener("click",linkAction));
+navLinks.forEach((n) => n.addEventListener("click", linkAction));
 
-  //--~~~~~~ CHANGE BACKGROUND HEADER~~~~~~//
-  function scrollHeader() {
-    const header = document.getElementById("header");
-    //when the scroll is greater than 80 viewport height ,add the class scroll header to the tag header
-    if (this.scrollY >= 80) header.classList.add("scroll-header");
-    else header.classList.remove("scroll-header");
-  }
-  window.addEventListener("scroll", scrollHeader);
-  
-  //--~~~~~~ SCROLL SELECTION ACTIVE LINK~~~~~~//
-  // get all sections that have an id defined
+//--~~~~~~ CHANGE BACKGROUND HEADER~~~~~~//
+function scrollHeader() {
+  const header = document.getElementById("header");
+  //when the scroll is greater than 80 viewport height ,add the class scroll header to the tag header
+  if (this.scrollY >= 80) header.classList.add("scroll-header");
+  else header.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
+
+//--~~~~~~ SCROLL SELECTION ACTIVE LINK~~~~~~//
+// get all sections that have an id defined
 const sections = document.querySelectorAll("section[id]");
 
 // add an event listener listening for scroll
@@ -72,7 +71,9 @@ function navHighlighter() {
     we are getting while looping through sections as a selector */
 
     // check if the navigation link exists before manipulating its classList
-    const navLink = document.querySelector(".nav-menu a[href*=" + sectionId + "]");
+    const navLink = document.querySelector(
+      ".nav-menu a[href*=" + sectionId + "]"
+    );
     if (navLink) {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         navLink.classList.add("active-link");
@@ -83,8 +84,8 @@ function navHighlighter() {
   });
 }
 
- //--~~~~~~ THEME DISPLAY CUSTOMIZATION~~~~~~//
- const theme = document.querySelector("#theme-button");
+//--~~~~~~ THEME DISPLAY CUSTOMIZATION~~~~~~//
+const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
 const colorPalette = document.querySelectorAll(".choose-color span");
 var root = document.querySelector(":root");
@@ -106,8 +107,7 @@ const closeThemeModal = (e) => {
 theme.addEventListener("click", openThemeModal);
 themeModal.addEventListener("click", closeThemeModal);
 
-
- //--~~~~~~ FONTS~~~~~~//
+//--~~~~~~ FONTS~~~~~~//
 
 //remove active class from spans or font size selectors
 const removeSizeSelector = () => {
@@ -134,8 +134,8 @@ fontSizes.forEach((size) => {
   });
 });
 
- //--~~~~~~ PRIMARY COLORS~~~~~~//
- //remove active class from colors
+//--~~~~~~ PRIMARY COLORS~~~~~~//
+//remove active class from colors
 const changeActiveColorClass = () => {
   colorPalette.forEach((colorPicker) => {
     colorPicker.classList.remove("active");
@@ -149,22 +149,22 @@ colorPalette.forEach((color) => {
     if (color.classList.contains("color-1")) {
       primaryHue = 252;
     } else if (color.classList.contains("color-2")) {
-      primaryHue = 352;
+      primaryHue = 3;
     } else if (color.classList.contains("color-3")) {
-      primaryHue = 99;
+      primaryHue = 210;
     } else if (color.classList.contains("color-4")) {
       primaryHue = 152;
     } else if (color.classList.contains("color-5")) {
-      primaryHue = 202;
+      primaryHue = 52;
     }
     color.classList.add("active");
     root.style.setProperty("--primary-color-hue", primaryHue);
   });
 });
 
- //--~~~~~~ THEME BACKGROUND~~~~~~//
+//--~~~~~~ THEME BACKGROUND~~~~~~//
 
- let lightColorLightness;
+let lightColorLightness;
 let whiteColorLightness;
 let darkColorLightness;
 
@@ -213,6 +213,3 @@ Bg3.addEventListener("click", () => {
   Bg1.classList.remove("active");
   changeBG();
 });
-
-
-
